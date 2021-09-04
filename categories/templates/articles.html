@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+{%block content%}
+
+        <div id="page" class="container">
+	        <div id="main">
+		        <div id="featured">
+			        <div class="title">
+				        <h2>CNNS Articles</h2>
+				        <span class="byline"></span>
+			        </div>
+			        <ul class="style1 article">
+				        <li>
+					        <p><a href="{%static 'articles/9-CNNS-Paper-Biomarkers-time-and-temp-stability-2019-published.pdf'%}" target="_blank">Effect of temperature and time delay in centrifugation on stability of select biomarkers of nutrition and non-communicable diseases in blood samples</a></p>
+				        </li>
+				        <li>
+					        <p><a href="{%static 'articles/10-CNNS-Paper-Characterisation-of-the-types-of-anaemia-2020-Published-in-Lancet-Global-Health.pdf'%}" target="_blank">Characterisation of the types of anaemia prevalent among children and adolescents aged 1–19 years in India: a population-based study</a></p>
+				        </li>
+				        <li>
+					        <p><a href="{%static 'articles/11-CNNS-Paper-Comparison-of-hemoglobin-concentrations-measured-by-HemoCue-and-a-hematology-analyzer.pdf'%}" target="_blank" >Comparison of hemoglobin concentrations measured by HemoCue and a hematology analyzer in Indian children and adolescents 1-19 years of age</a></p>
+				        </li>
+			        </ul>
+		        </div>
+	        </div>
+		</div>
+  
+{% endblock %}

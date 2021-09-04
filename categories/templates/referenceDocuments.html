@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load static %}
+{% static "pdf" as baseURL %}
+
+{% block content %}
+
+        <div id="page" class="container">
+	        <div id="main">
+                <div id="featured">
+                    <div class="title">
+                        <h2>NutritionIndiaInfo Reference Documents</h2>
+                    </div>
+                    <ul class="style1">
+                        <li >
+                            <p><a href="{%static 'referenceDocuments/NutritionIndiaInfo.pdf'%}" target="_blank">NutritionINDIA.Info Standards</a></p>
+                        </li>
+                        <li>
+                            <p><a href="{%static 'referenceDocuments/133960.pdf' %}" target="_blank">IFPRI POSHAN Abhiyaan Framework</a></p>
+                        </li>
+                        <li>
+                            <p><a href="{%static 'referenceDocuments/User-Guidance-Document.pdf'%}" target="_blank">NutritionINDIA.info User Guidance Document</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

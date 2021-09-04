@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+        <div id="page" class="container">
+	        <div id="main">
+			    <div class="title">
+				    <h2>CNNS Key Findings</h2>
+				    <span class="byline">(Click on the Key Findings to download it)</span>
+			    </div>
+			    <ul class="style1">
+				    <li><a href="{%static 'keyFindings/2019-10-10-CNNS-Key-Findings.pdf' %}" target="_blank">Key Findings</a></li>
+			    </ul>  
+	        </div>
+        </div>
+
+{% endblock %}

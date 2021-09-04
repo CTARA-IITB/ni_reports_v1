@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% load static %}
+{% static "pdf" as baseURL %}
+
+{% block content %}
+
+        <div id="page" class="container">
+	        <div id="main">
+		        <div id="featured">
+			        <div class="title">
+				        <h2>CNNS Factsheets</h2>
+				        <span class="byline">(Click on the State to download)</span>
+			        </div>
+			        <ul class="style1 factsheet"> 
+						{% for i in india %}
+						<li>
+							<a href="{{i.area_id}}" target="_blank">{{ i.area_name}}</a>
+						</li>
+						{% endfor %}
+						{% for s1 in states %}
+				        <li >
+                           <a href="{{s1.area_id}}" target="_blank">{{ s1.area_name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+		        </div>
+	        </div>
+        </div>
+
+{% endblock %}
