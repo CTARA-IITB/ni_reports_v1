@@ -1,7 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-
         <div id="page" class="container">
 	        <div id="main">
 		        <div id="featured">
@@ -9,18 +8,28 @@
                   <h2>State And District Nutrition Factsheets </h2>
                   <span class="byline">(To download District factsheet, select State, press VIEW and click District)</span>
               </div>
-              <form action="stateAndDistrict" method="post">
+              <form action="stateAndDistrict" method="post" name="formid" onsubmit="return true">
                 <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
                   {% csrf_token %}
                   <select name="selected_state" id="state" style="width: 250px; background-color: white; border: 1px solid black; border-radius: 5px; height: 40px;">
+
                     <option disabled="true" > --select country/state--</option>
-                    <option value="India" > India</option>
+
+                    {% if "India" ==  selected_state_value %}
+                    <option value="India" selected> India</option>
+                    {% else %}
+                    <option value="India"> India</option>
+                    {%endif%}
+                    
                     {% for s in states %}
+                    {% if s.area_name ==  selected_state_value %}
+                    <option value="{{s.area_name}}" selected> {{s.area_name}}</option>
+                    {% else %}
                     <option value="{{s.area_name}}"> {{s.area_name}}</option>
+                    {%endif%}
                     {% endfor %}
                   </select>
-                  <!-- <i class="fa fa-search"></i> -->
-                  <input type="submit"  value="View" style="width: 100px; background-color: rgba(255, 162, 70, 1); color: white;">
+                  <button type="submit" name="submit" style="width: 100px; background-color: rgba(255, 162, 70, 1); color: white;"><i class="fa fa-search"></i>  View</button> 
                 </div>
               </form>  
               {% if selected_state_value == "India"%}
@@ -49,4 +58,3 @@
 	        </div>
         </div>     
 {% endblock %}
-
