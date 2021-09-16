@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = [config('ALLOWED_HOST_1'),config('ALLOWED_HOST_2')]
+ALLOWED_HOSTS = [config('ALLOWED_HOST_1'), config('ALLOWED_HOST_2')]
 
 
 # Application definition
@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'ni_reports.wsgi.application'
 
 DATABASES = {
     'default': {
- 	'ENGINE': config('ENGINE'),
-        'NAME':config('NAME'),
-        'USER':config('DB_USER'),
-        'PASSWORD':config('PASSWORD'),
-        'HOST':config('HOST'),
-        'PORT':config('PORT'),
+        'ENGINE': config('ENGINE'),
+        'NAME': config('NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT'),
     }
 
 }
@@ -131,10 +131,9 @@ STATICFILES_DIRS = [
     BASE_DIR / config('STATICFILES_DIRS'),
 ]
 
-STATIC_ROOT= BASE_DIR / config('STATIC_ROOT')
+STATIC_ROOT = BASE_DIR / config('STATIC_ROOT')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
