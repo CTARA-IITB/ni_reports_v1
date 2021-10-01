@@ -14,6 +14,6 @@ urlpatterns=[
     path('thematicReport',views.thematicReport,name='thematicReport'),
     path('referenceDocuments',views.referenceDocuments,name='referenceDocuments'),
     path('questionnaire',views.questionnaire,name='questionnaire'),
-   
+    path('nfhsfactsheets',views.nfhsfactsheets,name='nfhsfactsheets'),
+
 ]
- 

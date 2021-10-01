@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+        <div id="page" class="container">
+	        <div id="main">
+		        <div id="featured">
+			        <div class="title">
+				        <h2>NFHS Factsheets</h2>
+				        <span class="byline">(Click on the State to download)</span>
+			        </div>
+			        <ul class="style1 factsheet">
+  						{% for state,factsheet in list %}
+  				        <li >
+                      <a href="{%static 'nfhs5_factsheet'%}/{{factsheet}}" target="_blank">{{ state.area_name}}</a>
+                  </li>
+                {% endfor %}
+                </ul>
+		        </div>
+	        </div>
+        </div>
+
+{% endblock %}
