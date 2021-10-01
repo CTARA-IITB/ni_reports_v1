@@ -6,16 +6,17 @@
 	        <div id="main">
 		        <div id="featured">
 			        <div class="title">
-				        <h2>NFHS Factsheets</h2>
+				        <h2>NFHS-5 FACT SHEETS</h2>
 				        <span class="byline">(Click on the State to download)</span>
 			        </div>
-			        <ul class="style1 factsheet">
-  						{% for state,factsheet in list %}
-  				        <li >
-                      <a href="{%static 'nfhs5_factsheet'%}/{{factsheet}}" target="_blank">{{ state.area_name}}</a>
-                  </li>
-                {% endfor %}
-                </ul>
+			        <ul class="style1 factsheet"> 
+						<a href="{%static 'nfhs5_factsheet'%}/NFHS-5_IND.csv" target="_blank">India</a>
+						{% for state,factsheet in list %}
+				        <li >
+                           <a href="{%static 'nfhs5_factsheet'%}/{{factsheet}}" target="_blank">{{ state.area_name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
 		        </div>
 	        </div>
         </div>
