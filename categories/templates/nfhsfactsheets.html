@@ -10,10 +10,10 @@
 				        <span class="byline">(Click on the State to download district level data in CSV format)</span>
 			        </div>
 			        <ul class="style1 factsheet"> 
-						<a href="{%static 'nfhs5_factsheet'%}/NFHS-5_IND.csv" target="_blank">India</a>
+						<a href="{%static 'nfhs5_factsheet'%}/NFHS-5_IND.csv" target="_blank"  alt="India State wise NFHS-5 Reports">India</a>
 						{% for state,factsheet in list %}
 				        <li >
-                           <a href="{%static 'nfhs5_factsheet'%}/{{factsheet}}" target="_blank">{{ state.area_name}}</a>
+                           <a href="{%static 'nfhs5_factsheet'%}/{{factsheet}}" target="_blank"  alt="India State wise NFHS-5 Reports">{{ state.area_name}}</a>
                         </li>
                         {% endfor %}
                     </ul>
