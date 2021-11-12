@@ -11,7 +11,7 @@
               <form action="stateAndDistrict" method="post" name="formid" onsubmit="return true">
                 <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
                   {% csrf_token %}
-                  <select name="selected_state" id="state" style="width: 250px; background-color: white; border: 1px solid black; border-radius: 5px; height: 40px;">
+                  <select name="selected_state" id="state" style="width: 250px; background-color: white; border: 1px solid black; border-radius: 5px; height: 40px;"  alt="India State wise NFHS-5 Reports">
 
                     <option disabled="true" > --select country/state--</option>
 
@@ -36,12 +36,12 @@
                 <ul class="style1 stateAndDistrict" > 
                   {% for i in india %}
                     <li>
-                      <a href="{{i.area_id}}" target="_blank">{{ i.area_name}}</a> 
+                      <a href="{{i.area_id}}" target="_blank"  alt="India State wise NFHS-5 Reports">{{ i.area_name}}</a> 
                     </li>
                   {% endfor %}
                   {% for s in states %}
                     <li>
-                      <a href="{{s.area_id}}" target="_blank">{{ s.area_name}}</a>
+                      <a href="{{s.area_id}}" target="_blank"  alt="India State wise NFHS-5 Reports">{{ s.area_name}}</a>
                     </li>
                   {% endfor %}  
                 </ul>
@@ -49,7 +49,7 @@
                 <ul class="style1 stateAndDistrict" > 
                   {% for d in district %}
                     <li>
-                      <a href="{{d.area_id}}" target="_blank">{{ d.area_name}}</a> 
+                      <a href="{{d.area_id}}" target="_blank"  alt="India State wise NFHS-5 Reports">{{ d.area_name}}</a> 
                     </li>
                   {% endfor %}
                 </ul>
