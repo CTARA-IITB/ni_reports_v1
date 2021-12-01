@@ -11,9 +11,10 @@
 			        </div>
 			        <ul class="style1 factsheet"> 
 						<a href="{%static 'nfhs5_factsheet'%}/NFHS-5_IND.csv" target="_blank">India</a>
-						{% for state,factsheet in list %}
+						
+						{% for key,value in states.items %}
 				        <li >
-                           <a href="{%static 'nfhs5_factsheet'%}/{{factsheet}}" target="_blank">{{ state.area_name}}</a>
+                           <a href="{%static 'nfhs5_factsheet'%}/NFHS-5_{{key}}.csv" target="_blank">{{ value}}</a>
                         </li>
                         {% endfor %}
                     </ul>
